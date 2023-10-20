@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -16,7 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex justify-center min-h-screen">
+        <div className="w-[600px] shadow-xl min-h-screen p-6 mx-auto">
+          <div className="font-bold text-xl mb-6">Pokemon Database</div>
+
+          <div>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
